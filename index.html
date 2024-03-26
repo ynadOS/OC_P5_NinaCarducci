@@ -5,16 +5,15 @@
 	<title>Nina Carducci - Photographe à Bordeaux</title>
 	<meta name="description" content="Je suis Nina Carducci, photographe à Bordeaux mais aussi en Ile-de-France. Photos de mariage, concerts, entreprises, portraits, voici mon Portfolio.">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
-	<link rel="stylesheet" href="./assets/style.css">
+	<link rel="preload" rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" as="style"  onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="stylesheet" href="./assets/style.min.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap">
 	<meta charset="UTF-8">
-	<script src="./assets/bootstrap/bootstrap.bundle.js" ></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" ></script>
-	<script src="./assets/maugallery.js" ></script>
-	<script src="./assets/scripts.js" ></script>
+	<script src="./assets/bootstrap/bootstrap.bundle.min.js" defer></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" async integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="./assets/maugallery.js" defer></script>
+	<script src="./assets/scripts.js" defer></script>
 	<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5MFYDE8GVT"></script>
 <script>
@@ -27,14 +26,14 @@
 </head>
 <body>
 <div class="top-header">
-	<h3 class="name">Nina Carducci</h3>
+	<h1 class="name">Nina Carducci - Photographe</h1>
 	<div class="nav">   
 		<ul>
 			<li><a href="#about">À propos</a></li>
 			<li><a href="#gallery">Galerie</a></li>
 			<li><a href="#services">Service</a></li>
 			<li><a href="#contact">Contact</a></li>
-			<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img src="assets/images/instagram.png" alt=""></a></li>
+			<li><a class="social-link" aria-label="Lien vers Instagram" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img src="assets/images/instagram.png" alt="Logo Instagram"></a></li>
 		</ul>
 	</div>
 </div>
@@ -47,13 +46,23 @@
 		</div>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img src="./assets/images/slider/ryoji-iwata-man-on-pedestrian-pathway.webp" alt="Homme en costume sur un passage piéton" class="d-block w-100">
+				<img srcset="./assets/images/slider/ryoji-iwata-man-on-pedestrian-pathway.webp 1920w,
+				  		 	 ./assets/images/slider/ryoji-iwata-man-on-pedestrian-pathway768.webp 768w,
+						 	 ./assets/images/slider/ryoji-iwata-man-on-pedestrian-pathway320.webp 320w"
+					alt="Homme en costume sur un passage piéton" class="d-block w-100">
+			</div>
+			
+			<div class="carousel-item">
+				<img srcset="./assets/images/slider/nicholas-green-audience-concert.webp 1920w,
+							 ./assets/images/slider/nicholas-green-audience-concert768.webp 768w,
+							 ./assets/images/slider/nicholas-green-audience-concert.webp 320w"
+				loading="lazy" class="d-block w-100" alt="Photo du public pendant un concert">
 			</div>
 			<div class="carousel-item">
-				<img src="./assets/images/slider/nicholas-green-audience-concert.webp" class="d-block w-100" alt="Photo du public pendant un concert">
-			</div>
-			<div class="carousel-item">
-				<img src="./assets/images/slider/edward-cisneros-couple-kissing-wedding.webp" class="d-block w-100" alt="Photo d'un couple lors de leur mariage">
+				<img srcset="./assets/images/slider/edward-cisneros-couple-kissing-wedding.webp,
+							./assets/images/slider/edward-cisneros-couple-kissing-wedding768.webp 768w,
+							./assets/images/slider/edward-cisneros-couple-kissing-wedding320.webp 320w"
+				loading="lazy" class="d-block w-100" alt="Photo d'un couple lors de leur mariage">
 			</div>
 		</div>
 		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -68,41 +77,41 @@
 </div>
 <div id="about">
 	<div class="picture left">
-		<img src="./assets/images/nina-carducci-portrait.webp" alt="Portrait de Nina Carducci">
+		<img src="./assets/images/nina-carducci-portrait.webp" width="100%" height="auto" alt="Portrait de Nina Carducci" loading="lazy">
 	</div>
 	<div id="about-me">
-		<h3 class="about-me__title">A propos de moi</h3>
-		<h6 class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</h6>
+		<h2 class="about-me__title">A propos de moi</h2>
+		<p class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</p>
 		<p>Nous passons notre vie à chercher le bonheur, et lorsque nous y touchons, nous n’avons qu’une envie : le figer au travers de photographies pour le savourer avec les personnes qui sont importantes à nos yeux, ou le partager au plus grand nombre.
 			C’est ce que je vous propose : saisir ces merveilleux moments au travers de mon regard, mon approche, ma technique. Rendre ces moments immortels, afin que vous puissiez y puiser de l’amour, du bonheur, de la tendresse et de lumière à chaque fois que vous poserez les yeux sur vos photos.</p>
 	</div>
 </div>
 <div id="gallery">
-	<h3 class="title">Portfolio</h3>
+	<h2 class="title">Portfolio</h2>
 	<div class="container py-3">
 		<div class="gallery" style="display: none">
-			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-picture-of-audience-concert.webp" alt="Photo du public pendant un concert">
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/man-portrait-tuxedo.webp" alt="Portrait d'un chef d'entreprise en costume">
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-woman-smiling-meeting-work.webp" alt="Femme qui sourit pendant une réunion d'équipe">
-			<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing-hands-family-wedding-day.webp" alt="Photo des mains des mariés et de leurs enfants">
-			<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji-man-closing-his-eyes.webp" alt="Portrait d'un homme qui ferme les yeux à cause du soleil">
-			<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens-couple-wedding-day.webp" alt="Couple marié qui se tient la main">
-			<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg-girl-with-spectacles.webp" alt="Portrait d'une fille à lunette avec grillage">
-			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/austin-neill-singer-singing-concert.webp" alt="Photo d'un chanteur en plein concert">
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe-woman-smiling-at-work.webp" alt="Portrait d'une femme qui sourit au travail">
+			<img loading="lazy" data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-picture-of-audience-concert.webp" alt="Photo du public pendant un concert">
+			<img loading="lazy" data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/man-portrait-tuxedo.webp" alt="Portrait d'un chef d'entreprise en costume">
+			<img loading="lazy" data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-woman-smiling-meeting-work.webp" alt="Femme qui sourit pendant une réunion d'équipe">
+			<img loading="lazy" data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing-hands-family-wedding-day.webp" alt="Photo des mains des mariés et de leurs enfants">
+			<img loading="lazy" data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji-man-closing-his-eyes.webp" alt="Portrait d'un homme qui ferme les yeux à cause du soleil">
+			<img loading="lazy" data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens-couple-wedding-day.webp" alt="Couple marié qui se tient la main">
+			<img loading="lazy" data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg-girl-with-spectacles.webp" alt="Portrait d'une fille à lunette avec grillage">
+			<img loading="lazy" data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/austin-neill-singer-singing-concert.webp" alt="Photo d'un chanteur en plein concert">
+			<img loading="lazy" data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe-woman-smiling-at-work.webp" alt="Portrait d'une femme qui sourit au travail">
 		</div>
 	</div>
 	<div class="quote">
 		<figure>
 			<blockquote>
-				<h1 class="quote__text">Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.</h1>
+				<p class="quote__text">Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.</p>
 			</blockquote>
 			<figcaption class="quote__author">- Richard Avedon</figcaption>
 		</figure>
 	</div>
 </div>
 <div id="services">
-	<h3 class="title">Mes services</h3>
+	<h2 class="title">Mes services</h2>
 	<div class="container">
 		<div class="service">
 			<div class="service__description">
@@ -140,7 +149,7 @@
 <div class="quote">
 	<figure>
 		<blockquote>
-			<h1 class="quote__text">De manière inconsciente, je crois, je guette un regard, une expression, des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie</h1>
+			<p class="quote__text">De manière inconsciente, je crois, je guette un regard, une expression, des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie</p>
 		</blockquote>
 		<figcaption class="quote__author">- Richard Avedon</figcaption>
 	</figure>
@@ -151,17 +160,17 @@
 			<h3>Une question ? Une demande de devis ?</h3>
 			<p> N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures</p>
 			<form action="" method="post">
-				<label>Nom</label>
-				<input type="text" name="nom" id="nom">
-				<label>Email</label>
-				<input type="email" name="email" id="email">
-				<label>Message</label>
-				<textarea name="message" id="message" cols="30" rows="10"></textarea>
+				<label for="firstname">Nom</label>
+				<input type="text" name="nom" id="nom" aria-label="Nom">
+				<label for="email">Email</label>
+				<input type="email" name="email" id="email" aria-label="Courriel">
+				<label for="message">Message</label>
+				<textarea name="message" id="message" cols="30" rows="10" aria-label=""></textarea>
 				<input type="submit" value="Envoyer">
 			</form>
 		</div>
 		<div class="picture right">
-			<img src="./assets/images/photo-camera.webp" alt="Image d'un appareil photo argentique">
+			<img src="./assets/images/photo-camera.webp" width="100%" height="auto" alt="Image d'un appareil photo argentique" loading="lazy">
 		</div>
 	</div>
 </div>
