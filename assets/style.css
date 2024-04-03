@@ -54,6 +54,15 @@ body {
 	position: relative;
 }
 
+.contact_infos {
+	width: 100%;
+	height: auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding-inline: 100px;
+	padding-block: 100px;
+}
+
 .picture.left::before {
 	content: ' ';
 	background-color: #E5975F;
@@ -85,7 +94,6 @@ body {
 	font-size: 30px;
 }
 .about-me__introduction {
-	font-family: 'Spectral';
 	font-weight: 800;
 	font-style: italic;
 	width: 60%;
@@ -143,20 +151,18 @@ body {
 }
 
 .quote {
-	font-family: 'Spectral';
 	font-style: italic;
 	width: 70%;
 	margin: auto;
 	padding-block: 3em;
 }
 .quote__text {
-	font-family: Spectral;
 	font-style: italic;
 	font-weight: 300;
+	font-size: 2rem;
 
 }
 .quote__author {
-	font-family: Spectral;
 	font-weight: 800;
 	font-size: 22px;
 }
