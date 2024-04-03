@@ -63,6 +63,16 @@ body {
 	padding-block: 100px;
 }
 
+.contact_infos a {
+	text-decoration: none;
+	color: #5E5927;
+	padding: 10px;
+}
+.contact_infos a:hover{
+	background-color: #5E5927;
+	color: white;
+}
+
 .picture.left::before {
 	content: ' ';
 	background-color: #E5975F;
